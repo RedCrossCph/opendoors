@@ -10,3 +10,10 @@ Run `grunt` for building and `grunt serve` for preview.
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
+=======
+opendoors
+=========
+
+Management software for door-to-door fundraising campaigns
+
+This repository contains code for Open Doors v2
