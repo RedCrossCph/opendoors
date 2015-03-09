@@ -3,22 +3,32 @@
     <h1>_Søg efter indsamler eller kampagne</h1>
   </div>
   <div class="small-6 columns large-centered">
-    <input type="text" />
-    <button>_Search</button>
+    <input type="text" ng-change="search()" ng-model="searchInput" />
+    <button><i class="fa fa-search"></i></button>
   </div>
 
 
   <div class="small-6 columns large-centered collapsed" style="height: 5px;" colors>
   </div>
-  <div class="small-6 columns large-centered panel">
-    <div class="small-2 columns collapsed"  >
-      ICON
+  <div class="large-6 columns large-centered collapsed ">
+
+    <div class="large-12 columns panel">
+
+      <div class="small-12 columns" ng-repeat="data in searchResult">
+
+        <div class="small-1 columns collapsed" >
+          <i class="fa fa-user"></i>
+        </div>
+        <div class="small-7 columns collapsed">
+          {{data.email}}
+        </div>
+        <div class="small-4 columns collapsed">
+          <i class="fa fa-angle-right right"></i>
+        </div>
+
+      </div>
+
     </div>
-    <div class="small-6 columns collapsed">
-      NAVN
-    </div>
-    <div class="small-4 columns collapsed">
-      PHONE
-    </div>
+
   </div>
 </div>

@@ -28,7 +28,7 @@ angular
     .state('main', {
       url: "/",
       templateUrl: "views/main.html",
-      controller: 'MainCtrl'
+      controller: 'MainCtrl',
     })
     .state('about', {
       url: "about",
@@ -77,7 +77,7 @@ angular
       url: "createmeetingplace",
       templateUrl: "views/createmeetingplace.html",
       controller: 'CreatemeetingplaceCtrl',
-      parent: 'main'
+        parent: 'main'
     })
 
 }).run(function(translate) {
