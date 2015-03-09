@@ -1,0 +1,28 @@
+.panel {
+  background: #fff;
+  border-width: 0px;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
+
+.panel-header {
+  height: 5px;
+  &.zero {
+    background: $primary-color-lightest;
+  }
+  &.first {
+    background: $primary-color-lighter;
+  }
+  &.second {
+    background: $primary-color-light;
+  }
+  &.third {
+    background: $primary-color;
+  }
+  &.fourth {
+    background: $primary-color-dark;
+  }
+  &.fifth {
+    background: $primary-color-darker;
+  }
+}
