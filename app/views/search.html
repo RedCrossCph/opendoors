@@ -1,24 +1,29 @@
 <div class="row r-t">
-  <div class="small-6 columns large-centered">
-    <h1>_Søg efter indsamler eller kampagne</h1>
+  <div class="small-6 columns large-centered text-center">
+    <h1>Søg efter indsamler eller kampagne</h1>
   </div>
-  <div class="small-6 columns large-centered">
-    <input type="text" ng-change="search()" ng-model="searchInput" />
-    <button><i class="fa fa-search"></i></button>
+  <div class="small-6 columns large-centered collapsed text-center">
+
+    <!-- Search -->
+    <input type="text" ng-change="search()" ng-model="searchInput" class="search-input" placeholder="Søg i indsamlere og kampagner" /><!--
+    --><button class="search-button"><i class="fa fa-search"></i></button>
+    <!-- Search -->
+
   </div>
 
 
-  <div class="small-6 columns large-centered collapsed" style="height: 5px;" colors>
+  <div class="small-6 columns large-centered collapsed colors" colors ng-if="searchResult != undefined">
   </div>
   <div class="large-6 columns large-centered collapsed ">
 
     <div class="large-12 columns panel">
 
-      <div class="small-12 columns" ng-repeat="data in searchResult">
+      <div class="small-12 columns p-t-b-l-r" ng-repeat="data in searchResult">
 
         <div class="small-1 columns collapsed" >
           <i class="fa fa-user"></i>
         </div>
+
         <div class="small-7 columns collapsed">
           {{data.email}}
         </div>

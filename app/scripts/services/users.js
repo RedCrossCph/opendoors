@@ -8,7 +8,7 @@
  * Factory in the rkisApp.
  */
 angular.module('rkisApp')
-  .factory('Users', function ($q) {
+  .factory('Users', function ($q, API) {
 
     var service = {
       getUsers: getUsers
@@ -17,6 +17,7 @@ angular.module('rkisApp')
     return service;
 
     function getUsers() {
+      console.log(API.root);
       var deferred = $q.defer();
 
       var users = {
@@ -29,27 +30,27 @@ angular.module('rkisApp')
           collectioncans: 0
         },
         1: {
-          firstname     : 'Tommy',
-          secondname    : 'Jepsen',
-          address       : 'Bakekvej 1, 3. 306',
-          phonenumber   : '60117793',
-          email         : 'tommy@tommyjepsen.com',
+          firstname     : 'Niels',
+          secondname    : 'Poulsen',
+          address       : 'Jensengade 5',
+          phonenumber   : '55117755',
+          email         : 'niels@gmail.com',
           collectioncans: 0
         },
         2: {
-          firstname     : 'Tommy',
-          secondname    : 'Jepsen',
-          address       : 'Bakekvej 1, 3. 306',
-          phonenumber   : '60117793',
-          email         : 'tommy@tommyjepsen.com',
+          firstname     : 'Jakob',
+          secondname    : 'Fransen',
+          address       : 'Søndermarken 4',
+          phonenumber   : '11117793',
+          email         : 'jakoooobbbb123@gmail.com',
           collectioncans: 0
         },
         3: {
-          firstname     : 'Tommy',
-          secondname    : 'Jepsen',
-          address       : 'Bakekvej 1, 3. 306',
-          phonenumber   : '60117793',
-          email         : 'tommy@tommyjepsen.com',
+          firstname     : 'Jonas',
+          secondname    : 'Thomsen',
+          address       : 'Poulalle 6',
+          phonenumber   : '44117793',
+          email         : 'thomsenjonas@gmail.com',
           collectioncans: 0
         },
       }
