@@ -6,15 +6,19 @@
 
     <!-- Search -->
     <input type="text" ng-change="search()" ng-model="searchInput" class="search-input" placeholder="Søg i indsamlere og kampagner" /><!--
-    --><button class="search-button"><i class="fa fa-search"></i></button>
+    --><button class="search-button" ng-click="manuelSearch()"><i class="fa fa-search"></i></button>
     <!-- Search -->
-
+    <div class="popdown on-search" ng-if="searchResult != undefined && !manuelSearchState">
+      <div ng-repeat="data in searchResult" ui-sref="edituser">
+        <i class="fa fa-user"></i> {{data.email}} <i class="fa fa-angle-right right"></i>
+      </div>
+    </div>
   </div>
 
 
-  <div class="small-6 columns large-centered collapsed colors" colors ng-if="searchResult != undefined">
+  <div class="small-6 columns large-centered collapsed colors" colors ng-if="manuelSearchState">
   </div>
-  <div class="large-6 columns large-centered collapsed ">
+  <div class="large-6 columns large-centered collapsed " ng-if="manuelSearchState">
 
     <div class="large-12 columns panel">
 
@@ -27,6 +31,7 @@
         <div class="small-7 columns collapsed">
           {{data.email}}
         </div>
+
         <div class="small-4 columns collapsed">
           <i class="fa fa-angle-right right"></i>
         </div>

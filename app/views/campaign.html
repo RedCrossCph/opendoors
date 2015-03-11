@@ -3,17 +3,17 @@
   </div>
   <div class="small-6 columns collapsed large-centered">
     <div class="small-12 columns panel">
-      <div class="small-12 columns p-t-b-l-r">
+      <div class="small-12 columns p-t-b-l-r" ng-repeat="data in data">
 
-        <div class="small-2 columns collapsed">
-          ICON
+        <div class="small-1 columns  collapsed">
+			<i class="icon fa fa-tags"></i>
         </div>
-        <div class="small-6 columns collapsed">
-          NAVN
+        <div class="small-10 columns collapsed">
+			{{data.name}}
         </div>
-        <div class="small-4 columns collapsed">
-          PHONE
-        </div>
+		  <div class="small-1 columns  collapsed">
+			  <i class="icon fa fa-angle-right right"></i>
+		  </div>
 
       </div>
     </div>

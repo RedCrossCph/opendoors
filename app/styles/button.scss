@@ -1,0 +1,13 @@
+button {
+  &.large {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 14px;
+  }
+
+  &:hover {
+    background-color: $primary-color-darker;
+  }
+}

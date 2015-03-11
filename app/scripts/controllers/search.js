@@ -8,25 +8,38 @@
  * Controller of the rkisApp
  */
 angular.module('rkisApp')
-  .controller('SearchCtrl', function ($scope, Users) {
+	.controller('SearchCtrl', function ($scope, Users) {
 
-    $scope.searchResult;
-    $scope.search = search;
-    $scope.searchInput;
+		$scope.search = search;
+		$scope.manuelSearch = manuelSearch;
 
-    function search() {
-      Users.getUsers().then(success, error, always);
+		$scope.manuelSearchState = false;
+		$scope.searchResult;
+		$scope.searchInput;
 
-      function success(result) {
-        $scope.searchResult = result;
-      }
+		function search() {
+			if($scope.searchInput.length != 0) {
+				Users.getUsers().then(success, error, always);
 
-      function error(result) {
-        //Error handling
-      }
+			} else {
+				$scope.searchResult = undefined;
+				$scope.manuelSearchState = false;
+			}
 
-      function always(result) {
-      }
-    }
+			function success(result) {
+				$scope.searchResult = result;
+			}
 
-  });
+			function error(result) {
+				//Error handling
+			}
+
+			function always(result) {
+			}
+		}
+
+		function manuelSearch() {
+			$scope.manuelSearchState = true;
+		}
+
+	});
