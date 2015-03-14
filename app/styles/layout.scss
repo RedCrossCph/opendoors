@@ -6,3 +6,12 @@ button {
   background: $primary-color-dark;
 }
 
+.text-red {
+	color: $primary-color;
+}
+.text-gray {
+	color: $gray;
+}
+.text-right {
+	text-align: right !important;
+}

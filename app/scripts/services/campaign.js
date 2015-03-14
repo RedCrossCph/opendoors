@@ -17,25 +17,24 @@ angular.module('rkisApp')
 		return service;
 
 		function getCampaigns() {
-			console.log(API.root);
 			var deferred = $q.defer();
 
 			var campaigns = {
 				0: {
 					id     : '1',
-					name    : 'Nordvest',
+					name    : 'Russerne på KU',
 				},
 				1: {
 					id     : '2',
-					name    : 'Amager',
+					name    : 'Tyskerne',
 				},
 				2: {
 					id     : '3',
-					name    : 'Østerbro',
+					name    : 'Steven Seagal',
 				},
 				3: {
 					id     : '4',
-					name    : 'Nørrebro',
+					name    : 'Nye beboer',
 				},
 			}
 			deferred.resolve(campaigns);

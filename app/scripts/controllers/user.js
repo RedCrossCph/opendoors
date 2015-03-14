@@ -18,7 +18,6 @@ angular.module('rkisApp')
 		function getUsers() {
 			Users.getUsers().then(success, error, always);
 
-
 			function success(result) {
 				$scope.data = result;
 			}

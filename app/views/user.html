@@ -11,7 +11,7 @@
 				<h3>Navn</h3>
 			</div>
 
-			<div class="small-3 columns collapsed">
+			<div class="small-4 columns collapsed">
 				<h3>Email</h3>
 			</div>
 
@@ -19,7 +19,7 @@
 				<h3>Adresse</h3>
 			</div>
 
-			<div class="small-2 columns collapsed">
+			<div class="small-1 columns collapsed">
 				<h3>Telefon</h3>
 			</div>
 
@@ -27,17 +27,18 @@
 				&nbsp;
 			</div>
 		</div>
-		<div class="small-12 columns p-t-b-l-r" ng-repeat="data in data">
+		<div class="small-12 columns p-t-b-l-r grid" ng-repeat="data in data"
+			ui-sref="edituser({id:data.id})">
 
-			<div class="small-1 columns collapsed" >
-				<i class="fa fa-user"></i>
+			<div class="small-1 columns collapsed text-center" >
+				<i class="fa fa-user text-red"></i>
 			</div>
 
 			<div class="small-2 columns collapsed">
-				{{data.firstname}} {{data.secondname}}
+				{{data.firstname}} {{data.lastname}}
 			</div>
 
-			<div class="small-3 columns collapsed">
+			<div class="small-4 columns collapsed">
 				{{data.email}}
 			</div>
 
@@ -45,14 +46,13 @@
 				{{data.address}}
 			</div>
 
-			<div class="small-2 columns collapsed">
+			<div class="small-1 columns collapsed">
 				{{data.phonenumber}}
 			</div>
 
-			<div class="small-1 columns collapsed">
-				<i class="fa fa-angle-right right"></i>
+			<div class="small-1 text-center columns collapsed">
+				<i class="fa fa-angle-right"></i>
 			</div>
-
 		</div>
 	</div>
 </div>
