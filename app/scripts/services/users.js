@@ -35,7 +35,7 @@ angular.module('rkisApp')
 					lastname      : 'Fransen',
 					address       : 'Søndermarken 4',
 					phonenumber   : '11117793',
-					email         : 'jakoooobbbb123@gmail.com',
+					email         : 'jakoooob123@gmail.com',
 					meetingplace: 'Amager',
 					campaign : '',
 					collectioncans: 0

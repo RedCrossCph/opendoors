@@ -78,6 +78,9 @@ angular.module('rkisApp')
 			Users.createUser(data).then(success, error, always);
 
 			function success(result) {
+				// TODO
+				alert("Oprettet");
+				$state.go('search');
 			}
 
 			function error(result) {

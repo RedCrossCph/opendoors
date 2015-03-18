@@ -8,18 +8,14 @@
  * Factory in the rkisApp.
  */
 angular.module('rkisApp')
-  .factory('Campaigns', function ($q, API) {
+	.factory('Campaigns', function ($q, API) {
 
 		var service = {
-			getCampaigns: getCampaigns
-		};
+			getCampaigns: getCampaigns,
+			addCampaign: addCampaign,
 
-		return service;
-
-		function getCampaigns() {
-			var deferred = $q.defer();
-
-			var campaigns = {
+			//
+			campaigns: {
 				0: {
 					id     : '1',
 					name    : 'Russerne på KU',
@@ -37,9 +33,24 @@ angular.module('rkisApp')
 					name    : 'Nye beboer',
 				},
 			}
-			deferred.resolve(campaigns);
+		};
+
+		return service;
+
+		function getCampaigns() {
+			var deferred = $q.defer();
+
+
+			deferred.resolve(service.campaigns);
 
 			return deferred.promise;
+		}
+
+		function addCampaign(data) {
+			service.campaigns[Object.keys(service.campaigns).length] = {
+				id: Object.keys(service.campaigns).length+1,
+				name: data.name
+			}
 		}
 
 	});
