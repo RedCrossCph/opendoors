@@ -3,16 +3,16 @@
 	</div>
 	<div class="small-6 columns collapsed large-centered">
 		<div class="small-12 columns panel">
-			<div class="small-12 columns p-t-b-l-r">
+			<div class="small-12 columns p-t-b-l-r grid" ng-repeat="data in data" ui-sref="editmeetingplace({id:data.id})">
 
-				<div class="small-2 columns collapsed">
-					ICON
+				<div class="small-1 columns  collapsed text-center">
+					<i class="icon fa fa-tags text-red"></i>
 				</div>
-				<div class="small-6 columns collapsed">
-					NAVN
+				<div class="small-10 columns collapsed">
+					{{data.name}}
 				</div>
-				<div class="small-4 columns collapsed">
-					PHONE
+				<div class="small-1 columns  collapsed">
+					<i class="icon fa fa-angle-right right"></i>
 				</div>
 
 			</div>

@@ -47,10 +47,16 @@ angular.module('rkisApp')
 		}
 
 		function addCampaign(data) {
+			var deferred = $q.defer();
+
 			service.campaigns[Object.keys(service.campaigns).length] = {
 				id: Object.keys(service.campaigns).length+1,
 				name: data.name
 			}
+
+			deferred.resolve(service.campaigns);
+
+			return deferred.promise;
 		}
 
 	});

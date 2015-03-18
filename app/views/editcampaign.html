@@ -5,16 +5,18 @@
 		<div class="small-12 columns panel">
 			<div class="small-12 columns p-t-b-l-r">
 
-				<div class="small-2 columns collapsed">
-					ICON
+				<div class="small-12 text-center columns collapsed">
+					<h4>REDIGÈR KAMPAGNE</h4>
 				</div>
-				<div class="small-6 columns collapsed">
-					NAVN
-				</div>
-				<div class="small-4 columns collapsed">
-					PHONE
-				</div>
+				<div class="small-12 columns">
 
+					<input type="text" class="input-icon" placeholder="Kampagne" ng-model="campaignInput" required />
+					<i class="icon-input fa fa-tags"></i>
+
+				</div>
+				<div class="small-12 text-center columns collapsed">
+					<button class="large" ng-click="onCreate()">Redigér kampagne</button>
+				</div>
 			</div>
 		</div>
 	</div>

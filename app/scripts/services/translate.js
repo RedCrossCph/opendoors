@@ -31,7 +31,12 @@ angular.module('rkisApp')
 
         //Campaign
         allCampaigns: 'Alle kampagner',
-        createCampagin: 'Timeld kampagne'
+        createCampagin: 'Timeld kampagne',
+
+
+        //Meetingplace
+        allMeetingplace: 'Alle mødesteder',
+        createMeetingplace: 'Timeld mødested'
       }
     }
 

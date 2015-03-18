@@ -11,15 +11,11 @@ angular.module('rkisApp')
 	.factory('Meetingplaces', function ($q, API) {
 
 		var service = {
-			getMeetingplaces: getMeetingplaces
-		};
+			getMeetingplaces: getMeetingplaces,
+			addMeetingplace: addMeetingplace,
 
-		return service;
-
-		function getMeetingplaces() {
-			var deferred = $q.defer();
-
-			var meetingplaces = {
+		//
+			meetingplaces : {
 				0: {
 					id     : '1',
 					name    : 'Nordvest',
@@ -37,9 +33,29 @@ angular.module('rkisApp')
 					name    : 'Nørrebro',
 				},
 			}
-			deferred.resolve(meetingplaces);
+		};
+
+		return service;
+
+		function getMeetingplaces() {
+			var deferred = $q.defer();
+
+			deferred.resolve(service.meetingplaces);
 
 			return deferred.promise;
-
 		};
+
+		function addMeetingplace(data) {
+
+			var deferred = $q.defer();
+
+			service.meetingplaces[Object.keys(service.meetingplaces).length] = {
+				id: Object.keys(service.meetingplaces).length+1,
+				name: data.name
+			}
+
+			deferred.resolve(service.campaigns);
+
+			return deferred.promise;
+		}
 	});

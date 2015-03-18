@@ -1,21 +1,23 @@
 <div class="row r-t">
-  <div class="small-6 columns large-centered collapsed colors" colors>
-  </div>
-  <div class="small-6 columns collapsed large-centered">
-    <div class="small-12 columns panel">
-      <div class="small-12 columns p-t-b-l-r">
+	<div class="small-6 columns large-centered collapsed colors" colors>
+	</div>
+	<div class="small-6 columns collapsed large-centered">
+		<div class="small-12 columns panel">
+			<div class="small-12 columns p-t-b-l-r">
 
-        <div class="small-2 columns collapsed">
-          ICON
-        </div>
-        <div class="small-6 columns collapsed">
-          NAVN
-        </div>
-        <div class="small-4 columns collapsed">
-          PHONE
-        </div>
+				<div class="small-12 text-center columns collapsed">
+					<h4>TILMELD MØDESTED</h4>
+				</div>
+				<div class="small-12 columns">
 
-      </div>
-    </div>
-  </div>
+					<input type="text" class="input-icon" placeholder="Mødested" ng-model="meetingplaceInput" required />
+					<i class="icon-input fa fa-tags"></i>
+
+				</div>
+				<div class="small-12 text-center columns collapsed">
+					<button class="large" ng-click="onCreate()">Tilmeld mødested</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

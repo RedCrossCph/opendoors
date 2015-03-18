@@ -18,9 +18,14 @@
     padding-left: 20px;
     padding-right: 20px;
 
+	  margin: 0;
+
     text-align: center;
     &.active {
       background: $primary-color;
     }
+	  &:hover {
+		  background: $primary-color-light;
+	  }
   }
 }
