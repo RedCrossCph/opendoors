@@ -6,6 +6,10 @@ button {
   background: $primary-color-dark;
 }
 
+.border-right {
+	border-right: 1px solid $gray;
+}
+
 .text-red {
 	color: $primary-color;
 }
