@@ -11,42 +11,49 @@ angular.module('rkisApp')
 	.factory('Users', function ($q, API) {
 
 		var service = {
-			getUsers: getUsers, createUser: createUser, users: {
+			getUsers: getUsers,
+			createUser: createUser,
+			getUser: getUser,
+			users: {
 				0   : {
+					id: 0,
 					firstname     : 'Tommy',
 					lastname      : 'Jepsen',
 					address       : 'Bakekvej 1, 3. 306',
 					phonenumber   : '60117793',
 					email         : 'tommy@tommyjepsen.com',
 					meetingplace  : 'Amager',
-					campaign : '',
+					campaign : 'CPH',
 					collectioncans: 0
 				}, 1: {
+					id: 1,
 					firstname     : 'Niels',
 					lastname      : 'Poulsen',
 					address       : 'Jensengade 5',
 					phonenumber   : '55117755',
 					email         : 'niels@gmail.com',
 					meetingplace  : 'Amager',
-					campaign : '',
+					campaign : 'CPH',
 					collectioncans: 0
 				}, 2: {
+					id: 2,
 					firstname     : 'Jakob',
 					lastname      : 'Fransen',
 					address       : 'Søndermarken 4',
 					phonenumber   : '11117793',
 					email         : 'jakoooob123@gmail.com',
 					meetingplace: 'Amager',
-					campaign : '',
+					campaign : 'CPH',
 					collectioncans: 0
 				}, 3: {
+					id: 3,
 					firstname     : 'Jonas',
 					lastname      : 'Thomsen',
 					address       : 'Poulalle 6',
 					phonenumber   : '44117793',
 					email         : 'thomsenjonas@gmail.com',
 					meetingplace  : 'Amager',
-					campaign : '',
+					campaign : 'Nybeboer',
 					collectioncans: 0
 				},
 			}
@@ -79,6 +86,14 @@ angular.module('rkisApp')
 			console.log(service.users);
 
 			deferred.resolve(service.users);
+
+			return deferred.promise;
+		}
+
+		function getUser(id) {
+			var deferred = $q.defer();
+
+			deferred.resolve(service.users[id]);
 
 			return deferred.promise;
 		}

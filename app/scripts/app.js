@@ -31,7 +31,7 @@ angular
 				controller: 'MainCtrl',
 			})
 			.state('edituser', {
-				url: "edituser",
+				url: "edituser/{id}",
 				templateUrl: "views/edituser.html",
 				controller: 'EdituserCtrl',
 				parent: 'main'

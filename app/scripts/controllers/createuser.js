@@ -65,14 +65,14 @@ angular.module('rkisApp')
 		function onCreate() {
 
 			var data = {
-				firstname: $scope.firstnameInput,
-				lastname: $scope.lastnameInput,
-				address: $scope.addressInput,
-				phonenumber: $scope.phonenumberInput,
-				email: $scope.emailInput,
-				collectingcans: $scope.collectingcansInput,
-				campaign: $scope.campaignInput,
-				meetingplace: $scope.meetingplaceInput,
+					firstname: $scope.firstnameInput,
+					lastname: $scope.lastnameInput,
+					address: $scope.addressInput,
+					phonenumber: $scope.phonenumberInput,
+					email: $scope.emailInput,
+					collectingcans: $scope.collectingcansInput,
+					campaign: $scope.campaignInput,
+					meetingplace: $scope.meetingplaceInput,
 			}
 
 			Users.createUser(data).then(success, error, always);

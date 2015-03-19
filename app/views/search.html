@@ -9,7 +9,7 @@
     --><button class="search-button" ng-click="manuelSearch()"><i class="fa fa-search"></i></button>
 		<!-- Search -->
 		<div class="popdown on-search" ng-if="searchResult != undefined && !manuelSearchState">
-			<div class="small-12 columns grid p-t-b " ng-repeat="data in searchResult" ui-sref="edituser">
+			<div class="small-12 columns grid p-t-b " ng-repeat="data in searchResult" ui-sref="edituser({id:data.id})">
 
 				<div class="small-1 columns">
 					<i class="fa fa-user text-red"></i>
