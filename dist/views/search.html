@@ -1,2 +1,64 @@
-<div class="row r-t"> <div class="small-6 columns large-centered text-center"> <h1>Søg efter indsamler eller kampagne</h1> </div> <div class="small-6 columns large-centered collapsed text-center"> <!-- Search --> <input type="text" ng-change="search()" ng-model="searchInput" class="search-input" placeholder="Søg i indsamlere og kampagner"><!--
-    --><button class="search-button" ng-click="manuelSearch()"><i class="fa fa-search"></i></button> <!-- Search --> <div class="popdown on-search" ng-if="searchResult != undefined && !manuelSearchState"> <div ng-repeat="data in searchResult" ui-sref="edituser"> <i class="fa fa-user"></i> {{data.email}} <i class="fa fa-angle-right right"></i> </div> </div> </div> <div class="small-6 columns large-centered collapsed colors" colors ng-if="manuelSearchState"> </div> <div class="large-6 columns large-centered collapsed" ng-if="manuelSearchState"> <div class="large-12 columns panel"> <div class="small-12 columns p-t-b-l-r" ng-repeat="data in searchResult"> <div class="small-1 columns collapsed"> <i class="fa fa-user"></i> </div> <div class="small-7 columns collapsed"> {{data.email}} </div> <div class="small-4 columns collapsed"> <i class="fa fa-angle-right right"></i> </div> </div> </div> </div> </div>
+<div class="row r-t">
+	<div class="small-6 columns large-centered text-center">
+		<h1>Søg efter indsamler eller kampagne</h1>
+	</div>
+	<div class="small-6 columns large-centered collapsed text-center">
+
+		<!-- Search -->
+		<input type="text" ng-change="search()" ng-model="searchInput" class="search-input" placeholder="Søg i indsamlere og kampagner" /><!--
+    --><button class="search-button" ng-click="manuelSearch()"><i class="fa fa-search"></i></button>
+		<!-- Search -->
+		<div class="popdown on-search" ng-if="searchResult != undefined && !manuelSearchState">
+			<div class="small-12 columns grid p-t-b " ng-repeat="data in searchResult" ui-sref="edituser({id:data.id})">
+
+				<div class="small-1 columns">
+					<i class="fa fa-user text-red"></i>
+				</div>
+
+				<div class="small-10 columns">{{data.firstname}} {{data.lastname}} ({{data.phonenumber}}) </div>
+
+				<div class="small-1 columns text-right"> <i class="fa fa-angle-right"></i></div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="small-12 columns large-centered collapsed colors" colors ng-if="manuelSearchState">
+	</div>
+	<div class="large-12 columns large-centered collapsed " ng-if="manuelSearchState">
+
+		<div class="large-12 columns panel">
+
+			<div class="small-12 columns p-t-b-l-r grid	" ng-repeat="data in searchResult"
+				 ui-sref="edituser({id:data.id})">
+
+				<div class="small-1 columns collapsed text-center" >
+					<i class="fa fa-user text-red"></i>
+				</div>
+
+				<div class="small-2 columns collapsed">
+					{{data.firstname}} {{data.lastname}}
+				</div>
+
+				<div class="small-4 columns collapsed">
+					{{data.email}}
+				</div>
+
+				<div class="small-3 columns collapsed">
+					{{data.address}}
+				</div>
+
+				<div class="small-1 columns collapsed">
+					{{data.phonenumber}}
+				</div>
+
+				<div class="small-1 text-center columns collapsed">
+					<i class="fa fa-angle-right"></i>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+</div>

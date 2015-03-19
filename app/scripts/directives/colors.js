@@ -10,7 +10,7 @@ angular.module('rkisApp')
   .directive('colors', function () {
     return {
       restrict: 'EA',
-      templateUrl: 'scripts/directives/colors.html',
+      templateUrl: '../../views/colors.html',
       link: function link(scope, element, attrs) {
       }
     };

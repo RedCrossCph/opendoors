@@ -9,7 +9,7 @@
 angular.module('rkisApp')
   .directive('popdown', function () {
     return {
-      templateUrl: 'scripts/directives/popdown.html',
+      templateUrl: '../../views/popdown.html',
       restrict: 'E',
       scope: {
         data: '='
