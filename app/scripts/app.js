@@ -37,15 +37,15 @@ angular
 				parent: 'main'
 			})
 			.state('editcampaign', {
-				url: "editcampaign",
+				url: "editcampaign/{id}",
 				templateUrl: "views/editcampaign.html",
 				controller: 'EditcampaignCtrl',
 				parent: 'main'
 			})
 			.state('editmeetingplace', {
-				url: "editmeetingplace",
+				url: "editmeetingplace/{id}",
 				templateUrl: "views/editmeetingplace.html",
-				controller: 'eEitmeetingplaceCtrl',
+				controller: 'EditmeetingplaceCtrl',
 				parent: 'main'
 			})
 			.state('about', {

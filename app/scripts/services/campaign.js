@@ -13,23 +13,25 @@ angular.module('rkisApp')
 		var service = {
 			getCampaigns: getCampaigns,
 			addCampaign: addCampaign,
+			getCampaign: getCampaign,
+			editCampaign: editCampaign,
 
 			//
 			campaigns: {
 				0: {
-					id     : '1',
+					id     : '0',
 					name    : 'Russerne på KU',
 				},
 				1: {
-					id     : '2',
+					id     : '1',
 					name    : 'Tyskerne',
 				},
 				2: {
-					id     : '3',
+					id     : '2',
 					name    : 'Steven Seagal',
 				},
 				3: {
-					id     : '4',
+					id     : '3',
 					name    : 'Nye beboer',
 				},
 			}
@@ -55,6 +57,24 @@ angular.module('rkisApp')
 			}
 
 			deferred.resolve(service.campaigns);
+
+			return deferred.promise;
+		}
+
+		function getCampaign(id) {
+			var deferred = $q.defer();
+
+			deferred.resolve(service.campaigns[id]);
+
+			return deferred.promise;
+		}
+
+		function editCampaign(data) {
+			var deferred = $q.defer();
+
+			service.campaigns[data.id].name = data.name;
+
+			deferred.resolve("success");
 
 			return deferred.promise;
 		}

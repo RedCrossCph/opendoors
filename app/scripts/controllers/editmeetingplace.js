@@ -10,38 +10,51 @@
 angular.module('rkisApp')
 	.controller('EditmeetingplaceCtrl', function ($scope, $stateParams, Meetingplaces) {
 
-		$scope.id = $stateParams.id;
-		$scope.meetingplaceInput;
+
 		$scope.getMeetingplace = getMeetingplace;
-		$scope.editMeetingplace = editMeetingplace;
+		$scope.onCreate = onCreate;
+		var data;
+		$scope.nameInput;
 
-		activate();
+		getMeetingplace($stateParams.id);
 
-		function activate() {
-			getMeetingplace();
-		}
+		function getMeetingplace(id) {
 
-		function getMeetingplace() {
-			//Get only 1
-		}
-
-		function editMeetingplace() {
-			var data = {
-				name: $scope.meetingplaceInput
-			};
-
-			Meetingplaces.addMeetingplaces(data).then(success, error, always);
+			Meetingplaces.getMeetingplace(id).then(success, error, always);
 
 			function success(result) {
-				$scope.meetingplaceData = result;
+				data = result;
+				$scope.nameInput = result.name;
 			}
 
 			function error(result) {
-				//Error handling
+				$state.go("search");
 			}
 
 			function always(result) {
+
+			}
+		}
+
+		function onCreate() {
+			var dataSend = {
+				'id': data.id,
+				'name': $scope.nameInput
+			};
+
+			Meetingplaces.editMeetingplace(dataSend).then(success, error, always);
+
+			function success(result) {
+
 			}
 
+			function error(result) {
+				$state.go("search");
+			}
+
+			function always(result) {
+
+			}
 		}
+
 	});
