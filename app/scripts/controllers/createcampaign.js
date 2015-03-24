@@ -8,7 +8,7 @@
  * Controller of the rkisApp
  */
 angular.module('rkisApp')
-  .controller('CreatecampaignCtrl', function ($scope, Campaigns) {
+  .controller('CreatecampaignCtrl', function ($scope, Campaigns, MessagesUtil) {
     $scope.onCreate = onCreate;
 
 		$scope.campaignInput;
@@ -21,7 +21,7 @@ angular.module('rkisApp')
 			Campaigns.addCampaign(data).then(success, error, always);
 
 			function success() {
-				alert("Oprettet");
+				MessagesUtil.create("Kampagnen er blevet oprettet");
 			}
 
 			function error() {

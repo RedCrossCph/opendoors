@@ -17,3 +17,9 @@ opendoors
 Management software for door-to-door fundraising campaigns
 
 This repository contains code for Open Doors v2
+
+
+# Needs to be done;
+
+- Needs to do the search, if no is found, then the options to create 
+- Everything connected to an API

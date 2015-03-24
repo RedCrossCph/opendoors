@@ -43,6 +43,8 @@ angular.module('rkisApp')
 				$scope.collectingcansInput = result.collectingcans;
 				$scope.campaignInput = result.campaign;
 				$scope.meetingplaceInput = result.meetingplace;
+				MessagesUtil.create("Indsamleren er blevet opdateret");
+
 			}
 
 			function error(result) {

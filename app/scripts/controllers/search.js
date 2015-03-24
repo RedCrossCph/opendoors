@@ -8,7 +8,7 @@
  * Controller of the rkisApp
  */
 angular.module('rkisApp')
-	.controller('SearchCtrl', function ($scope, Users) {
+	.controller('SearchCtrl', function ($scope, Users, MessagesUtil) {
 
 		$scope.search = search;
 		$scope.manuelSearch = manuelSearch;

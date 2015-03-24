@@ -8,7 +8,7 @@
  * Controller of the rkisApp
  */
 angular.module('rkisApp')
-	.controller('CreateuserCtrl', function ($scope, Campaigns, Users, Meetingplaces) {
+	.controller('CreateuserCtrl', function ($scope, Campaigns, Users, Meetingplaces, MessagesUtil) {
 
 		$scope.campaignInput;
 		$scope.campaignData;
@@ -79,7 +79,7 @@ angular.module('rkisApp')
 
 			function success(result) {
 				// TODO
-				alert("Oprettet");
+				MessagesUtil.create("Indsamleren er blevet oprettet");
 				$state.go('search');
 			}
 

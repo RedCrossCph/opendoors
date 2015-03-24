@@ -45,6 +45,7 @@ angular.module('rkisApp')
 			Meetingplaces.editMeetingplace(dataSend).then(success, error, always);
 
 			function success(result) {
+				MessagesUtil.create("Mødestedet er blevet opdateret");
 
 			}
 

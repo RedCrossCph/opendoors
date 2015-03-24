@@ -46,6 +46,7 @@ angular.module('rkisApp')
 			Campaigns.editCampaign(dataSend).then(success, error, always);
 
 			function success(result) {
+				MessagesUtil.create("Kampagnen er blevet opdateret");
 
 			}
 
