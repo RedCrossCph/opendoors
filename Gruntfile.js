@@ -456,12 +456,12 @@ module.exports = function (grunt) {
     'concat',
     'ngAnnotate',
     'copy:dist',
-   // 'cdnify',
-    'cssmin',
+    'cdnify',
+    //'cssmin',
     'uglify',
     'filerev',
     'usemin',
-    //'htmlmin'
+    'htmlmin'
   ]);
 
   grunt.registerTask('default', [

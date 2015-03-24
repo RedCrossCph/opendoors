@@ -6,6 +6,9 @@
 	top: 20px;
 	border-radius: $border-radius;
 	background: #fff;
+
+	z-index: 99999 !important;
+
 	padding: 20px;
 }
 .messages.ng-enter {

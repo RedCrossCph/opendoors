@@ -30,6 +30,18 @@ angular
 				templateUrl: "views/main.html",
 				controller: 'MainCtrl',
 			})
+			.state('login', {
+				url: "login/",
+				templateUrl: "views/login.html",
+				controller: 'LoginCtrl',
+				parent: 'main'
+			})
+			.state('logout', {
+				url: "logout/",
+				templateUrl: "views/logout.html",
+				controller: 'LogoutCtrl',
+				parent: 'main'
+			})
 			.state('edituser', {
 				url: "edituser/{id}",
 				templateUrl: "views/edituser.html",

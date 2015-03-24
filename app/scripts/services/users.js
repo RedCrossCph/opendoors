@@ -8,9 +8,12 @@
  * Factory in the rkisApp.
  */
 angular.module('rkisApp')
-	.factory('Users', function ($q, API) {
+	.factory('Users', function ($q, API, $rootScope) {
 
 		var service = {
+			login: login,
+			checkLogin: checkLogin,
+			logout: logout,
 			getUsers: getUsers,
 			createUser: createUser,
 			getUser: getUser,
@@ -60,6 +63,28 @@ angular.module('rkisApp')
 		};
 
 		return service;
+
+		function login() {
+			var deferred = $q.defer();
+
+			$rootScope.userID = service.users[0].id;
+
+			deferred.resolve(service.users[0]);
+
+			return deferred.promise;
+		}
+
+		function checkLogin() {
+			if($rootScope.userID != undefined) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+
+		function logout() {
+			delete $rootScope.userID;
+		}
 
 
 		function getUsers() {
