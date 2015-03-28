@@ -5,8 +5,10 @@
 	<div class="small-6 columns large-centered collapsed text-center">
 
 		<!-- Search -->
+
 		<input type="text" ng-change="search()" ng-model="searchInput" class="search-input" placeholder="Søg i indsamlere og kampagner" /><!--
     --><button class="search-button" ng-click="manuelSearch()"><i class="fa fa-search"></i></button>
+
 		<!-- Search -->
 		<div class="popdown on-search" ng-if="searchResult != undefined && !manuelSearchState">
 			<div class="small-12 columns grid p-t-b " ng-repeat="data in searchResult" ui-sref="edituser({id:data.id})">
@@ -20,6 +22,41 @@
 				<div class="small-1 columns text-right"> <i class="fa fa-angle-right"></i></div>
 
 			</div>
+
+			<!-- No results -->
+
+			<div class="small-12 columns grid p-t-b">
+				<div class="small-1 columns">
+					<i class="fa fa-user text-red"></i>
+				</div>
+
+				<div class="small-10 columns">Fandt ingen resultater - tilføj indsamler?</div>
+
+				<div class="small-1 columns text-right"> <i class="fa fa-angle-right"></i></div>
+
+			</div>
+			<div class="small-12 columns grid p-t-b">
+				<div class="small-1 columns">
+					<i class="fa fa-users text-red"></i>
+				</div>
+
+				<div class="small-10 columns">Eller tilføje en kampagne?</div>
+
+				<div class="small-1 columns text-right"> <i class="fa fa-angle-right"></i></div>
+
+			</div>
+			<div class="small-12 columns grid p-t-b">
+				<div class="small-1 columns">
+					<i class="fa fa-tags text-red"></i>
+				</div>
+
+				<div class="small-10 columns">Eller tilføje et mødested?</div>
+
+				<div class="small-1 columns text-right"> <i class="fa fa-angle-right"></i></div>
+
+			</div>
+
+			<!-- No results -->
 		</div>
 	</div>
 

@@ -15,6 +15,7 @@ angular.module('rkisApp')
 			addMeetingplace: addMeetingplace,
 			getMeetingplace: getMeetingplace,
 			editMeetingplace: editMeetingplace,
+				deleteMeetingplace: deleteMeetingplace,
 
 		//
 			meetingplaces : {
@@ -73,6 +74,16 @@ angular.module('rkisApp')
 			var deferred = $q.defer();
 
 			service.meetingplaces[data.id].name = data.name;
+
+			deferred.resolve("success");
+
+			return deferred.promise;
+		}
+
+		function deleteMeetingplace(data) {
+			var deferred = $q.defer();
+
+			delete service.meetingplaces[data.id];
 
 			deferred.resolve("success");
 

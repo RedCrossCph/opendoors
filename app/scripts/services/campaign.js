@@ -15,6 +15,7 @@ angular.module('rkisApp')
 			addCampaign: addCampaign,
 			getCampaign: getCampaign,
 			editCampaign: editCampaign,
+			deleteCampaign: deleteCampaign,
 
 			//
 			campaigns: {
@@ -44,6 +45,16 @@ angular.module('rkisApp')
 
 
 			deferred.resolve(service.campaigns);
+
+			return deferred.promise;
+		}
+
+		function deleteCampaign(data) {
+			var deferred = $q.defer();
+
+			delete service.campaigns[data.id];
+
+			deferred.resolve("success");
 
 			return deferred.promise;
 		}

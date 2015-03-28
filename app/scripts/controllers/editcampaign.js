@@ -8,12 +8,13 @@
  * Controller of the rkisApp
  */
 angular.module('rkisApp')
-	.controller('EditcampaignCtrl', function ($scope, Campaigns, $stateParams, $state) {
+	.controller('EditcampaignCtrl', function ($scope, Campaigns, $stateParams, MessagesUtil, $state) {
 
 		$scope.getCampaign = getCampaign;
 		$scope.onCreate = onCreate;
 		var data;
 		$scope.nameInput;
+		$scope.onDelete = onDelete;
 
 		getCampaign($stateParams.id);
 
@@ -23,9 +24,28 @@ angular.module('rkisApp')
 
 			function success(result) {
 				data = result;
-				console.log(result);
-				console.log(data);
 				$scope.nameInput = result.name;
+			}
+
+			function error(result) {
+				$state.go("search");
+			}
+
+			function always(result) {
+
+			}
+		}
+
+		function onDelete() {
+			var dataSend = {
+				'id': data.id,
+			};
+
+			Campaigns.deleteCampaign(dataSend).then(success, error, always);
+
+			function success(result) {
+				MessagesUtil.create("Kampagnen er blevet slettet");
+				$state.go('campaign');
 			}
 
 			function error(result) {

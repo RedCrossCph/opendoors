@@ -11,8 +11,16 @@ angular.module('rkisApp')
   .controller('LoginCtrl', function ($scope, Users, $state, MessagesUtil) {
     $scope.onLogin = onLogin;
 
+		$scope.passwordInput;
+		$scope.emailInput;
+
 		function onLogin() {
-			Users.login().then(success, error, always);
+			var data = {
+				email: $scope.emailInput,
+				password: $scope.passwordInput
+			};
+
+			Users.login(data).then(success, error, always);
 
 			function success(result) {
 				$scope.data = result;

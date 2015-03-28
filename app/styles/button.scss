@@ -1,10 +1,19 @@
 button {
+
+	font-size: 16px;
+	font-weight: 600;
+
 	&.large {
 		padding-left: 50px;
 		padding-right: 50px;
 		padding-top: 20px;
 		padding-bottom: 20px;
 		font-size: 16px;
+	}
+	&.double {
+		width: 46%;
+		padding-top: 20px;
+		padding-bottom: 20px;
 	}
 
 	&:hover {
@@ -16,4 +25,8 @@ button {
 	&:active {
 		background-color: $primary-color-darker;
 	}
+}
+button.green {
+	background: $success-color;
+	color: #fff;
 }

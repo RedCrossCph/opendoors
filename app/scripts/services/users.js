@@ -64,8 +64,11 @@ angular.module('rkisApp')
 
 		return service;
 
-		function login() {
+		function login(data) {
 			var deferred = $q.defer();
+
+			console.log(data.email);
+			console.log(data.password);
 
 			$rootScope.userID = service.users[0].id;
 
