@@ -5,7 +5,7 @@
 		<div class="small-12 columns panel">
 			<div class="small-12 columns p-t-b-l-r">
 
-				<form novalidate>
+				<form name="createForm"  novalidate>
 
 					<div class="small-12 columns collapsed text-center">
 						<h2>TILMELD EN PERSON</h2>
@@ -85,7 +85,7 @@
 					</div>
 
 					<div class="small-12 columns text-center">
-							<button class="large" ng-click="onCreate()">Opret bruger</button>
+							<button class="large" ng-click="onCreate()" ng-disabled="!createForm.$valid">Opret bruger</button>
 					</div>
 				</form>
 

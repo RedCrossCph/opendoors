@@ -25,6 +25,24 @@ button {
 	&:active {
 		background-color: $primary-color-darker;
 	}
+	&:disabled {
+		color: $gray-light;
+		background: $primary-color;
+		cursor: not-allowed;
+		&:hover {
+			color: $gray-light;
+			background: $primary-color;
+		}
+	}
+}
+button.disabled {
+	color: $gray-light;
+	background: $primary-color;
+	cursor: not-allowed;
+	&:hover {
+		color: $gray-light;
+		background: $primary-color;
+	}
 }
 button.green {
 	background: $success-color;

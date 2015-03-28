@@ -25,7 +25,7 @@
 
 			<!-- No results -->
 
-			<div class="small-12 columns grid p-t-b">
+			<div class="small-12 columns grid p-t-b" ui-sref="createuser" ng-if="searchResult.length == 0">
 				<div class="small-1 columns">
 					<i class="fa fa-user text-red"></i>
 				</div>
@@ -35,7 +35,7 @@
 				<div class="small-1 columns text-right"> <i class="fa fa-angle-right"></i></div>
 
 			</div>
-			<div class="small-12 columns grid p-t-b">
+			<div class="small-12 columns grid p-t-b"  ui-sref="createcampaign" ng-if="searchResult.length == 0">
 				<div class="small-1 columns">
 					<i class="fa fa-users text-red"></i>
 				</div>
@@ -45,7 +45,7 @@
 				<div class="small-1 columns text-right"> <i class="fa fa-angle-right"></i></div>
 
 			</div>
-			<div class="small-12 columns grid p-t-b">
+			<div class="small-12 columns grid p-t-b"  ui-sref="createmeetingplace" ng-if="searchResult.length == 0">
 				<div class="small-1 columns">
 					<i class="fa fa-tags text-red"></i>
 				</div>
