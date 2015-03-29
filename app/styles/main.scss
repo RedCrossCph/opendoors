@@ -1,9 +1,11 @@
 // bower:scss
 // endbower
-@import '../bower_components/foundation/scss/foundation.scss';
-@import '../bower_components/font-awesome/css/font-awesome.css';
+
+@import '../bower_components/foundation/scss/foundation';
 
 @import 'variables';
+
+@import '../bower_components/font-awesome/css/font-awesome.css';
 
 @import 'layout';
 @import 'header';
