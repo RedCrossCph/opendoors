@@ -21,6 +21,7 @@ angular
 		//
 		// For any unmatched url, redirect to /state1
 
+
 		$urlRouterProvider.otherwise("/");
 		//
 		// Now set up the states
@@ -29,6 +30,12 @@ angular
 				url: "/",
 				templateUrl: "views/main.html",
 				controller: 'MainCtrl',
+			})
+			.state('group', {
+				url: "group/",
+				templateUrl: 'views/group.html',
+				controller: 'GroupCtrl',
+				parent: 'main'
 			})
 			.state('login', {
 				url: "login/",

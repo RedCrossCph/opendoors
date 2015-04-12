@@ -1,12 +1,12 @@
 <div class="row r-t">
 	<div class="small-6 columns large-centered text-center">
-		<h1>Søg efter indsamler eller kampagne</h1>
+		<h1>Søg efter en indsamler</h1>
 	</div>
 	<div class="small-6 columns large-centered collapsed text-center">
 
 		<!-- Search -->
 
-		<input type="text" ng-change="search()" ng-model="searchInput" class="search-input" placeholder="Søg i indsamlere og kampagner" /><!--
+		<input type="text" ng-change="search()" ng-model="searchInput" class="search-input" placeholder="Søg i indsamlere" /><!--
     --><button class="search-button" ng-click="manuelSearch()"><i class="fa fa-search"></i></button>
 
 		<!-- Search -->
@@ -17,7 +17,7 @@
 					<i class="fa fa-user text-red"></i>
 				</div>
 
-				<div class="small-10 columns">{{data.firstname}} {{data.lastname}} ({{data.phonenumber}}) </div>
+				<div class="small-10 columns">{{data.firstname}} {{data.lastname}} (+45 {{data.phonenumber}}) </div>
 
 				<div class="small-1 columns text-right"> <i class="fa fa-angle-right"></i></div>
 
@@ -35,6 +35,8 @@
 				<div class="small-1 columns text-right"> <i class="fa fa-angle-right"></i></div>
 
 			</div>
+
+			<!--
 			<div class="small-12 columns grid p-t-b"  ui-sref="createcampaign" ng-if="searchResult.length == 0">
 				<div class="small-1 columns">
 					<i class="fa fa-users text-red"></i>
@@ -55,6 +57,7 @@
 				<div class="small-1 columns text-right"> <i class="fa fa-angle-right"></i></div>
 
 			</div>
+			-->
 
 			<!-- No results -->
 		</div>

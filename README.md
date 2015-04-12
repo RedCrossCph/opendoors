@@ -1,25 +1,21 @@
-# rkis
+# How to work on this project
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.11.1.
+Functionality same as rkis.dk
 
-## Build & development
+## How to
 
-Run `grunt` for building and `grunt serve` for preview.
+Download & install node.js, then install grunt & bower through node(npm).
 
-## Testing
+Clone project and cd to the project. Then npm init & install, and bower install.
+Write grunt serve and see Grunt do the magic.
 
-Running `grunt test` will run the unit tests with karma.
-=======
-opendoors
-=========
-
-Management software for door-to-door fundraising campaigns
-
-This repository contains code for Open Doors v2
+Use yeoman to generate new content. Project is using yeoman angular generator. 
+Write yo angular:route logout, to create a new route with logout. Edit in app.js to match the angular route-ui instead of angular.
 
 
-# Needs to be done;
+Download yeoman angular generator; https://github.com/yeoman/generator-angular
 
-- Needs to do the search, if no is found, then the options to create 
+
+## Needs to be done;
+
 - Everything connected to an API

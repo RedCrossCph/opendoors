@@ -8,36 +8,40 @@
  * Factory in the rkisApp.
  */
 angular.module('rkisApp')
-  .factory('translate', function ($rootScope) {
+	.factory('translate', function ($rootScope) {
 
-    var service = {
-      init: init
-    };
+		var service = {
+			init: init
+		};
 
-    return service;
+		return service;
 
-    function init() {
+		function init() {
 
-      $rootScope.translate = {
-        //Util
-        utilLogout: 'Log ud',
+			$rootScope.translate = {
+				//Util
+				utilLogout: 'Log ud',
 
-        //Search
-          search: 'Søg',
+				//Search
+				search: 'Find indsamler',
 
-        //User
-        allUsers: 'Alle indsamlere',
-        createUser: 'Tilmeld bruger',
+				//User
+				allUsers: 'Indsamlere',
+				createUser: 'Opret helt ny indsamler',
 
-        //Campaign
-        allCampaigns: 'Alle kampagner',
-        createCampagin: 'Timeld kampagne',
+				//Campaign
+				allCampaigns: 'Kampagner',
+				createCampagin: 'Opret kampagne',
 
 
-        //Meetingplace
-        allMeetingplace: 'Alle mødesteder',
-        createMeetingplace: 'Timeld mødested'
-      }
-    }
+				//Meetingplace
+				allMeetingplace: 'Mødesteder',
+				createMeetingplace: 'Opret mødested',
 
-  });
+				//Group
+				allGroups: 'Indsamlingsgrupper',
+				createGroups: 'Opret indsamlingsgrupper'
+			}
+		}
+
+	});
