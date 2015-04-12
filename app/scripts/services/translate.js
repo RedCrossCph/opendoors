@@ -40,7 +40,12 @@ angular.module('rkisApp')
 
 				//Group
 				allGroups: 'Indsamlingsgrupper',
-				createGroups: 'Opret indsamlingsgrupper'
+				createGroups: 'Opret indsamlingsgrupper',
+
+				//Routes
+					allRoutes: 'Ruter',
+				createRoutes: 'Opret ruter',
+
 			}
 		}
 

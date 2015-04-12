@@ -3,56 +3,68 @@
 	</div>
 	<div class="small-12 columns  panel">
 		<div class="small-12 columns p-t-b-l-r">
-			<div class="small-1 columns collapsed" >
-				&nbsp;
+
+			<div class="small-3 columns collapsed">
+				<h3>Gruppe</h3>
+			</div>
+
+			<div class="small-1 columns collapsed">
+				<h3>Udlever.</h3>
+			</div>
+
+			<div class="small-1 columns collapsed">
+				<h3>Indlever.</h3>
+			</div>
+
+			<div class="small-1 columns collapsed">
+				<h3>Total</h3>
 			</div>
 
 			<div class="small-2 columns collapsed">
-				<h3>Navn</h3>
+				<h3>Antal personer</h3>
 			</div>
 
-			<div class="small-4 columns collapsed">
-				<h3>Email</h3>
+			<div class="small-2 columns collapsed">
+				<h3>Mødested</h3>
 			</div>
 
-			<div class="small-3 columns collapsed">
-				<h3>Adresse</h3>
+			<div class="small-2 columns collapsed">
+				<h3>Antal tildelte ruter</h3>
 			</div>
 
-			<div class="small-1 columns collapsed">
-				<h3>Telefon</h3>
-			</div>
 
-			<div class="small-1 columns collapsed">
-				&nbsp;
-			</div>
 		</div>
 		<div class="small-12 columns p-t-b-l-r grid" ng-repeat="data in data"
 			 ui-sref="edituser({id:data.id})">
 
-			<div class="small-1 columns collapsed text-center" >
-				<i class="fa fa-user text-red"></i>
-			</div>
-
-			<div class="small-2 columns collapsed">
+			<div class="small-3 columns collapsed">
 				{{data.firstname}} {{data.lastname}}
 			</div>
 
-			<div class="small-4 columns collapsed">
-				{{data.email}}
-			</div>
-
-			<div class="small-3 columns collapsed">
-				{{data.address}}
+			<div class="small-1 columns collapsed">
+				0
 			</div>
 
 			<div class="small-1 columns collapsed">
-				{{data.phonenumber}}
+				0
 			</div>
 
-			<div class="small-1 text-center columns collapsed">
-				<i class="fa fa-angle-right"></i>
+			<div class="small-1 columns collapsed">
+				0
 			</div>
+
+			<div class="small-2 columns collapsed">
+				0
+			</div>
+
+			<div class="small-2 columns collapsed">
+				Asd
+			</div>
+
+			<div class="small-2 columns collapsed">
+				0
+			</div>
+
 		</div>
 	</div>
 </div>

@@ -1,0 +1,52 @@
+<div class="row r-t slideInDown">
+	<div class="small-12 columns large-centered collapsed colors" colors>
+	</div>
+	<div class="small-12 columns  panel">
+		<div class="small-12 columns p-t-b-l-r">
+			<div class="small-1 columns collapsed" >
+				&nbsp;
+			</div>
+
+			<div class="small-2 columns collapsed">
+				<h3>Rutenummer</h3>
+			</div>
+
+			<div class="small-4 columns collapsed">
+				<h3>Indsamlingsgrupper</h3>
+			</div>
+
+			<div class="small-3 columns collapsed">
+				<h3>Mødested</h3>
+			</div>
+
+
+
+			<div class="small-1 columns collapsed">
+				&nbsp;
+			</div>
+		</div>
+		<div class="small-12 columns p-t-b-l-r grid" ng-repeat="data in data"
+			 ui-sref="edituser({id:data.id})">
+
+			<div class="small-1 columns collapsed text-center" >
+				<i class="fa fa-tags text-red"></i>
+			</div>
+
+			<div class="small-2 columns collapsed">
+				{{data.firstname}} {{data.lastname}}
+			</div>
+
+			<div class="small-4 columns collapsed">
+				{{data.email}}
+			</div>
+
+			<div class="small-3 columns collapsed">
+				{{data.address}}
+			</div>
+
+			<div class="small-1 text-center columns collapsed">
+				<i class="fa fa-angle-right"></i>
+			</div>
+		</div>
+	</div>
+</div>

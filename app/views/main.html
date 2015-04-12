@@ -1,18 +1,25 @@
 <messages></messages>
 <div class="rc-header" ng-if="userID != undefined">
-  <div class="row">
-    <div class="small-12 columns">
-      <a ui-sref="search" ui-sref-active="active">{{::translate.search}}</a>
-      <a ui-sref="user" ui-sref-active="active"> {{::translate.allUsers}}</a>
-      <a ui-sref="campaign" ui-sref-active="active"> {{::translate.allCampaigns}}</a>
-      <a ui-sref="meetingplace" ui-sref-active="active"> {{::translate.allMeetingplace}}</a>
-      <a ui-sref="group" ui-sref-active="active"> {{::translate.allGroups}}</a>
-      <a ui-sref="logout" class="right" ui-sref-active="active"> {{::translate.utilLogout}}</a>
-    </div>
-  </div>
+	<div class="row">
+		<div class="small-12 columns">
+			<a ui-sref="search" ui-sref-active="active">{{::translate.search}}</a>
+			<a ui-sref="user" ui-sref-active="active"> {{::translate.allUsers}}</a>
+			<a ui-sref="campaign" ui-sref-active="active"> {{::translate.allCampaigns}}</a>
+			<a ui-sref="meetingplace" ui-sref-active="active"> {{::translate.allMeetingplace}}</a>
+			<a ui-sref="group" ui-sref-active="active"> {{::translate.allGroups}}</a>
+			<a ui-sref="route" ui-sref-active="active"> {{::translate.allRoutes}}</a>
+
+			<a class="right" ng-click="dropdown = !dropdown	"> {{user.firstname}}</a>
+
+			<div class="dropdown-main" ng-if="dropdown == true">
+				<a>{{meetingplace}}</a><br/>
+				<a ui-sref="logout"  ui-sref-active="active">{{::translate.utilLogout}}</a>
+			</div>
+		</div>
+	</div>
 </div>
 <div class="row">
-  <div class="small-12 columns">
-    <div ui-view></div>
-  </div>
+	<div class="small-12 columns">
+		<div ui-view></div>
+	</div>
 </div>

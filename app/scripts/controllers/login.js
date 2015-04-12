@@ -8,8 +8,8 @@
  * Controller of the rkisApp
  */
 angular.module('rkisApp')
-  .controller('LoginCtrl', function ($scope, Users, $state, MessagesUtil) {
-    $scope.onLogin = onLogin;
+	.controller('LoginCtrl', function ($scope, Users, $state, MessagesUtil) {
+		$scope.onLogin = onLogin;
 
 		$scope.passwordInput;
 		$scope.emailInput;
@@ -35,4 +35,4 @@ angular.module('rkisApp')
 			function always(result) {
 			}
 		}
-  });
+	});

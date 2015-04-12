@@ -8,7 +8,7 @@
  * Factory in the rkisApp.
  */
 angular.module('rkisApp')
-	.factory('Users', function ($q, API, $rootScope) {
+	.factory('Users', function ($q, API, $rootScope, Settings) {
 
 		var service = {
 			login: login,
@@ -27,7 +27,8 @@ angular.module('rkisApp')
 					email         : 'tommy@tommyjepsen.com',
 					meetingplace  : 'Amager',
 					campaign : 'CPH',
-					collectioncans: 0
+					collectioncans: 0,
+					niveau: 0,
 				}, 1: {
 					id: 1,
 					firstname     : 'Niels',
@@ -37,7 +38,8 @@ angular.module('rkisApp')
 					email         : 'niels@gmail.com',
 					meetingplace  : 'Amager',
 					campaign : 'CPH',
-					collectioncans: 0
+					collectioncans: 0,
+					niveau: 0
 				}, 2: {
 					id: 2,
 					firstname     : 'Jakob',
@@ -47,7 +49,8 @@ angular.module('rkisApp')
 					email         : 'jakoooob123@gmail.com',
 					meetingplace: 'Amager',
 					campaign : 'CPH',
-					collectioncans: 0
+					collectioncans: 0,
+					niveau: 0
 				}, 3: {
 					id: 3,
 					firstname     : 'Jonas',
@@ -57,7 +60,8 @@ angular.module('rkisApp')
 					email         : 'thomsenjonas@gmail.com',
 					meetingplace  : 'Amager',
 					campaign : 'Nybeboer',
-					collectioncans: 0
+					collectioncans: 0,
+					niveau: 0
 				},
 			}
 		};
@@ -67,10 +71,11 @@ angular.module('rkisApp')
 		function login(data) {
 			var deferred = $q.defer();
 
-			console.log(data.email);
-			console.log(data.password);
-
 			$rootScope.userID = service.users[0].id;
+
+			//Settings which niveau the user i on. If administrator then do stuff
+			Settings.niveau = service.users[0].niveau;
+			Settings.meetingplace = service.users[0].meetingplace;
 
 			deferred.resolve(service.users[0]);
 

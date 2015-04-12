@@ -1,21 +1,39 @@
-<div class="row r-t">
-  <div class="small-6 columns large-centered collapsed colors" colors>
-  </div>
-  <div class="small-6 columns collapsed large-centered">
-    <div class="small-12 columns panel">
-      <div class="small-12 columns p-t-b-l-r grid" ng-repeat="dataRepeat in data" ui-sref="editcampaign({'id': dataRepeat.id})">
+<div class="row r-t slideInDown">
+	<div class="small-12 columns large-centered collapsed colors" colors>
+	</div>
+	<div class="small-12 columns  panel">
+		<div class="small-12 columns p-t-b-l-r">
 
-        <div class="small-1 columns  collapsed text-center">
-			<i class="icon fa fa-users text-red"></i>
-        </div>
-        <div class="small-10 columns collapsed">
-			{{dataRepeat.name}}
-        </div>
-		  <div class="small-1 columns  collapsed">
-			  <i class="icon fa fa-angle-right right"></i>
-		  </div>
+			<div class="small-8 columns collapsed">
+				<h3>Navn</h3>
+			</div>
 
-      </div>
-    </div>
-  </div>
+			<div class="small-2 columns collapsed">
+				<h3>Indsamlere</h3>
+			</div>
+
+			<div class="small-2 columns collapsed">
+				<h3>Beløb totalt</h3>
+			</div>
+
+		</div>
+		<div class="small-12 columns p-t-b-l-r grid"
+			 ng-repeat="dataRepeat in data" ui-sref="editcampaign({'id': dataRepeat.id})">
+
+			<div class="small-8 columns collapsed">
+				{{dataRepeat.name}}
+			</div>
+
+			<div class="small-2 columns collapsed">
+				1111
+			</div>
+
+			<div class="small-2 columns collapsed">
+				2424
+			</div>
+
+
+
+		</div>
+	</div>
 </div>
